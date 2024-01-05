@@ -22,7 +22,7 @@ Feel free to contact me!
 """
 st.write(content2)
 
-col3, col4 = st.columns(2)
+col3, emp_col, col4 = st.columns([2,0.5,2])
 df=pandas.read_csv("data.csv")
 
 with col3:
@@ -38,3 +38,4 @@ with col4:
         st.write(row["description"])
         st.image("Images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
+
